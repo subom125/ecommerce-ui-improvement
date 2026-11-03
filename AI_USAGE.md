@@ -38,3 +38,34 @@ toàn bộ code trong phần này: `<div class="product-grid">` là để hiển
 
 có thể tự chỉnh nội dung chi tiết của từng sản phẩm
 có thể tự chỉnh tên doanh nghiệp (em chỉnh từ Skincare Studio thành Paula's Choice)
+
+
+---
+
+# BUỔI 2 – HTML & CSS (khu vực danh sách sản phẩm)
+
+## 1. Công cụ AI
+Claude (Anthropic).
+
+## 2. Prompt tiêu biểu đã sử dụng
+Các prompt theo mẫu đề Buổi 2 (đã điền mã HTML/CSS thật của dự án). Bản đầy đủ nằm trong file Word báo cáo.
+
+| Prompt | Mục đích | Kết quả chính |
+|---|---|---|
+| 1 | Phân tích mã hiện tại, tìm 3 vấn đề | Ảnh bị cắt; thẻ chưa có cụm thao tác; nội dung thẻ 3 bị lỗi định dạng |
+| 2 | Kiểm tra cấu trúc HTML5 | Đổi `div` thành `ul > li > article`; giữ nguyên thứ bậc h1–h3 |
+| 3 | Kiểm tra liên kết CSS | `css/style.css` đã liên kết đúng, đường dẫn tương đối hợp lệ |
+| 4 | Selector và Box Model | Viết lại CSS thẻ sản phẩm có chú thích |
+| 5 | Flexbox | `.product-footer` căn giá và nút bằng `space-between`, `align-items:center`, `gap` |
+| 6 | CSS Grid | `repeat(4, minmax(0,1fr))`, đổi còn 2 cột ở ≤ 900px |
+| 7 | Hover/focus | `transition`, `:hover`, `:focus-within`, `:focus-visible` |
+| 8 | Kiểm tra lỗi | Xác định nguyên nhân ảnh bị cắt và cách sửa |
+
+## 3. Phần tự kiểm tra và điều chỉnh
+- Ví dụ của đề dùng liên kết `product-detail.html`. Dự án **không có** trang này nên không dùng, tránh liên kết chết; thay bằng nút **Yêu thích** (chỉ là giao diện).
+- Ví dụ của đề dùng `object-fit: cover`. Ảnh sản phẩm là ảnh dọc, nền trắng, nên dùng `object-fit: contain` để không cắt chai/tuýp.
+- Lỗi ảnh bị cắt được kiểm chứng bằng cách đo kích thước ảnh so với khung (trước: ảnh cao 395–474px trong khung 250px; sau: ảnh cao 218px).
+- Đã kiểm tra lại ở 1366px, 768px, 390px; không có cuộn ngang.
+
+## 4. Phần tôi hiểu và có thể giải thích
+Xem phần "Câu hỏi kiểm tra kiến thức" trong file Word và mục 3 của README.
